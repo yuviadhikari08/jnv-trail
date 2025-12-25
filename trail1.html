@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navodayan Community Hub</title>
+    <link rel="stylesheet" href="trail1.css">
+</head>
+<body>
+    <header>
+        <h1>Navodayan Community Hub</h1>
+        <p>Connecting Navodayans for Success and Support</p>
+    </header>
+    <nav>
+        <a href="#data">Data Category</a>
+        <a href="#filter">Filter System</a>
+        <a href="#updates">Latest Updates</a>
+        <a href="#registration">Registration</a>
+        <a href="#help">Help & Support</a>
+        <a href="#study">Study Material</a>
+        <a href="#jobs">Govt Jobs</a>
+        <a href="#forms">University Forms</a>
+        <a href="#placement">Placement</a>
+        <a href="#events">Events</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#announcements">Announcements</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="data">
+            <h2>Data Category</h2>
+            <form id="dataForm">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="JNV Name" required>
+                <input type="text" placeholder="District" required>
+                <input type="text" placeholder="State" required>
+                <input type="text" placeholder="Batch" required>
+                <input type="number" placeholder="Age" required>
+                <select required>
+                    <option value="">Select Course</option>
+                    <option>Class 9-12</option>
+                    <option>CUET</option>
+                    <option>NEET</option>
+                    <option>JEE</option>
+                    <option>UPSC</option>
+                    <option>SSC</option>
+                    <option>Banking</option>
+                    <option>State Exams</option>
+                </select>
+                <select required>
+                    <option value="">Current Status</option>
+                    <option>Student</option>
+                    <option>Job Preparation</option>
+                </select>
+                <input type="text" placeholder="Current City/State" required>
+                <input type="tel" placeholder="Contact No" required>
+                <button type="submit">Submit Data</button>
+            </form>
+        </section>
+
+        <section id="filter">
+            <h2>Filter System</h2>
+            <div class="filter">
+                <select id="courseFilter">
+                    <option value="">Filter by Course</option>
+                    <option>Class 9-12</option>
+                    <option>CUET</option>
+                    <option>NEET</option>
+                    <option>JEE</option>
+                    <option>UPSC</option>
+                    <option>SSC</option>
+                    <option>Banking</option>
+                    <option>State Exams</option>
+                </select>
+                <input type="text" id="batchFilter" placeholder="Filter by Batch">
+                <input type="number" id="ageFilter" placeholder="Filter by Age">
+                <input type="text" id="stateFilter" placeholder="Filter by State">
+                <button onclick="applyFilters()">Apply Filters</button>
+            </div>
+            <div id="filteredResults" class="hidden">
+                <p>Filtered results will appear here based on selections.</p>
+            </div>
+        </section>
+
+        <section id="updates">
+            <h2>Latest Updates</h2>
+            <p>New forms, admissions, events...</p>
+            <div class="quick-links">
+                <a href="#directory">Navodayan Directory</a>
+                <a href="#study">Study Material</a>
+                <a href="#jobs">Govt Jobs</a>
+                <a href="#help">Help Request</a>
+                <a href="#placement">Placement</a>
+            </div>
+        </section>
+
+        <section id="registration">
+            <h2>Navodayan Registration Form</h2>
+            <form id="regForm">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" style="color: #fdcb6e;">Sign In</a></p>
+        </section>
+
+        <section id="help">
+            <h2>Help / Support Section</h2>
+            <div class="quick-links">
+                <a href="#admission">Admission Help</a>
+                <a href="#medical">Medical Emergency</a>
+                <a href="#hostel">Hostel / PG Help</a>
+                <a href="#career">Career Guidance</a>
+            </div>
+            <form>
+                <textarea placeholder="Post your request here..." rows="4"></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+            <p>Verified volunteers will assist you.</p>
+        </section>
+
+        <section id="study">
+            <h2>Study Material Section</h2>
+            <div class="quick-links">
+                <a href="#">Class 9–12</a>
+                <a href="#">CUET</a>
+                <a href="#">NEET</a>
+                <a href="#">JEE</a>
+                <a href="#">UPSC</a>
+                <a href="#">SSC</a>
+                <a href="#">Banking</a>
+                <a href="#">State Exams</a>
+            </div>
+        </section>
+
+        <section id="jobs">
+            <h2>Govt Job & Form Alert</h2>
+            <p>Govt Jobs Notifications, Application Dates, Eligibility, Links...</p>
+            <button>View Latest Jobs</button>
+        </section>
+
+        <section id="forms">
+            <h2>University / College Forms</h2>
+            <div class="quick-links">
+                <a href="#">Central Universities</a>
+                <a href="#">State Universities</a>
+                <a href="#">Private Universities</a>
+                <a href="#">Medical / Engineering Counseling</a>
+            </div>
+        </section>
+
+        <section id="placement">
+            <h2>Placement & Opportunity Section</h2>
+            <p>Internships, Placements, Referrals...</p>
+            <div class="quick-links">
+                <a href="#">Internship</a>
+                <a href="#">Placement Drive</a>
+                <a href="#">Alumni Referrals</a>
+                <a href="#">Freelance</a>
+            </div>
+        </section>
+
+        <section id="events">
+            <h2>Events & Meetups</h2>
+            <div class="events">
+                <div class="event">
+                    <h3>Navodayan Meet</h3>
+                    <p>Join us for a reunion.</p>
+                    <button>Register</button>
+                </div>
+                <div class="event">
+                    <h3>Webinars</h3>
+                    <p>Career Talks and more.</p>
+                    <button>Attend</button>
+                </div>
+                <div class="event">
+                    <h3>Blood Donation</h3>
+                    <p>Social Events.</p>
+                    <button>Participate</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories">
+            <h2>Success Stories / Alumni Talks</h2>
+            <div class="stories">
+                <div class="story">
+                    <h3>Navodayan Achievement</h3>
+                    <p>Motivational story...</p>
+                </div>
+                <div class="story">
+                    <h3>Interview Experience</h3>
+                    <p>Share your journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="announcements">
+            <h2>Announcement / Notice Board</h2>
+            <p>Important notices, exam changes, emergency updates...</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Admin Page</h2>
+            <p>Email: admin@navodayan.com</p>
+            <p>WhatsApp Group: <a href="#" style="color: #fdcb6e;">Join Here</a></p>
+            <button>Volunteer Registration</button>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2023 Navodayan Community Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
